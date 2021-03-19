@@ -3,22 +3,27 @@
 ## Data Resources:
 
 **1. CSVs: Sales Data(https://www.zillow.com/research/data/)**
+
 **2. Google Sheets: Inventory Data(https://www.zillow.com/research/data/)**
+
 **3. Web Scraping: School's Data(www.greatschools.org)**
 
 # ETL Process:
 
 ## Extraction:
 
-**1. CSVs(Data Resources/ZHVI dir):** Zillow website provides ZHVI(Zillow Home Value Index) CSVs files. 
+**1. CSVs(Data Resources/ZHVI dir):** 
+- Zillow website provides ZHVI(Zillow Home Value Index) CSVs files. 
 - It categorise on Numbers of Bed Room. Here 5 files are being used each per Bed Room count (i.e. Zip_zhvi_bdrmcnt_1.csv -> data for 1 Bed Room homes). 
 - Zillow provides monthly data from year 1996 in form of one cloumn per month, total 300 columns.
 
-- 1 Bed Room Data - Zip_zhvi_bdrmcnt_1.csv - Columns - 310 * Rows - 18459
-- 2 Bed Room Data - Zip_zhvi_bdrmcnt_2.csv - Columns - 310 * Rows - 26755
-- 3 Bed Room Data - Zip_zhvi_bdrmcnt_3.csv - Columns - 310 * Rows - 28800
-- 4 Bed Room Data - Zip_zhvi_bdrmcnt_4.csv - Columns - 310 * Rows - 26580
-- 5 Bed Room Data - Zip_zhvi_bdrmcnt_5.csv - Columns - 310 * Rows - 22074
+|  Home Category  |       File Name        |  Data Size (Columns * Rows)  |File Size|
+| --------------- | ---------------------- | -----------------------------| --------|
+| 1 Bed Room      | Zip_zhvi_bdrmcnt_1.csv |      310 * 18459             | 35.3 MB |
+| 2 Bed Room      | Zip_zhvi_bdrmcnt_2.csv |      310 * 26755             | 56.0 MB |
+| 3 Bed Room      | Zip_zhvi_bdrmcnt_3.csv |      310 * 28800             | 63.0 MB |
+| 4 Bed Room      | Zip_zhvi_bdrmcnt_4.csv |      310 * 26580             | 58.7 MB |
+| 5 Bed Room      | Zip_zhvi_bdrmcnt_5.csv |      310 * 22074             | 48.8 MB |
 
 - Renames column RegionName to Zip_Code.
 - Drops columns RegionID, SizeRank, RegionType. StateName
@@ -27,6 +32,31 @@
 - Reorders columns
 - Replaces N/A with 0
 - Mergerd all 5 files in to one DataFrame with index Bedroom Count and Zip Code
+- Final Output
+
+|    All Homes    | Data Size (Columns * Rows) |
+| --------------- | ------------------------ |
+|  One DataFrame  | 79 * 122753 |
+
+**1. Google Sheets(https://drive.google.com/drive/folders/1SCwfsJ8WD_295HeEOx8iBrM8mtwEzM7y):** 
+- It provides monthly Sales and Newly Pending Inventory Listings's Raw Data.
+- It also provides Rental data with Zillow Observed Rent Index (ZORI is a repeat-rent index that is weighted to the rental housing stock to ensure representativeness across the entire market, not just those homes currently listed for-rent. The index is dollar-denominated by computing the mean of listed rents that fall into the 40th to 60th percentile range for all homes and apartments in a given region, which is once again weighted to reflect the rental housing stock)
+
+|    Inventory    |       File Name           |  Data Size (Columns * Rows)  |
+| --------------- | ------------------------- | -----------------------------|
+|   Sales         |  US_Sale_Inventory_Monthly        |      44 * 98         |
+|   Pending       |  US_Pending_Inventory_Monthly     |      41 * 97         |
+|   Rental        |  ZORI_AllHomesPlusMultifamily_ZIP |      89 * 2069       |
+
+- **1.Sales Inventory:**
+- Drops columns RegionID, SizeRank, RegionType
+- Drops row having US summary
+- Extractes monthly data columns from year 2018
+- Renames column StateName to State
+- Extracts Region Name from Region Name with State
+- Final Output -> DataFrame with index Region Name and State
+
+
 
 
 
