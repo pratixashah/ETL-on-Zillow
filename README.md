@@ -64,28 +64,28 @@ A total of 5.64 million homes were sold in 2020, up 5.6% from 2019 and the most 
 
 **2. Google Sheets(https://drive.google.com/drive/folders/1SCwfsJ8WD_295HeEOx8iBrM8mtwEzM7y):** 
 
- **1.Sales Inventory:**
-- Drops columns RegionID, SizeRank, RegionType
-- Drops row having US summary
-- Extracts monthly data columns from year 2018
-- Renames column StateName to State
-- Extracts Region Name from Region Name with State
-- Final Output -> DataFrame with Region Name and State as an index 
+ - **1.Sales Inventory:**
+  - Drops columns RegionID, SizeRank, RegionType
+  - Drops row having US summary
+  - Extracts monthly data columns from year 2018
+  - Renames column StateName to State
+  - Extracts Region Name from Region Name with State
+  - Final Output -> DataFrame with Region Name and State as an index 
 
- **2.Pending Inventory:**
-- Drops columns RegionID, SizeRank, RegionType
-- Renames column StateName to State
-- Extracts Region Name from Region Name with State
-- Final Output -> DataFrame with Region Name and State as an index 
+- **2.Pending Inventory:**
+  - Drops columns RegionID, SizeRank, RegionType
+  - Renames column StateName to State
+  - Extracts Region Name from Region Name with State
+  - Final Output -> DataFrame with Region Name and State as an index 
 
- **3.Rentals:**
-- Drops columns RegionID, SizeRank
-- Extracts monthly data columns from year 2018
-- Converts columns' format from yyyy-mm to mm/dd/yyyy
-- Renames column RegionName to Zip_Code
-- Extracts State from MsaName(Metropolitan Statistical Area Name) to separate column named State
-- Extracts MsaName from MsaName and state
-- Final Output -> DataFrame with Zip Code as an index
+- **3.Rentals:**
+  - Drops columns RegionID, SizeRank
+  - Extracts monthly data columns from year 2018
+  - Converts columns' format from yyyy-mm to mm/dd/yyyy
+  - Renames column RegionName to Zip_Code
+  - Extracts State from MsaName(Metropolitan Statistical Area Name) to separate column named State
+  - Extracts MsaName from MsaName and state
+  - Final Output -> DataFrame with Zip Code as an index
 
 **3. Web Scraping: School's Data:** 
 - It replaces Non rated school's rating and N/A areas to 0
