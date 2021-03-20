@@ -109,7 +109,7 @@ A total of 5.64 million homes were sold in 2020, up 5.6% from 2019 and the most 
 
 **Why PostgreSQL was choosen?** 
 - PostgreSQL free, open-source database.
-- PostgreSQL is a relational database management system ( RDBMS )
+- PostgreSQL is a relational database management system ( RDBMS ).
 - This dataset has more relational data where all tables are related by Zip Code / State.
 
 
