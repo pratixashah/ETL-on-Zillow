@@ -98,14 +98,14 @@ A total of 5.64 million homes were sold in 2020, up 5.6% from 2019 and the most 
 - It will connects to zillow_db database to create all the tables
 - One by one it will create tables and provides aknowledgement for the same
 
-|    Table Name     |         Data               |    Data Size (Columns * Rows)    |
-|-------------------| -------------------------- | ---------------------------------|
-|  sales            |   Sales                    |    79 * 122753                   |
-|  states           |   State Names              |    59 * 2                        |
-|  inventory_sales  |   Sales Inventory          |    44 * 98                       |
-|  inventory_pending|   Newly Pending Inventory  |    41 * 97                       |
-|  rentals          |   Rental Inventory         |    89 * 2069                     |
-|  schools          |   Schools' listing         |    6 * 246                       |
+|    Table Name     |         Data               |   Key Columns                           | Data Size (Columns * Rows)    |
+|-------------------| -------------------------- | ----------------------------------------|-------------------------------|
+|  sales            |   Sales                    |  Zip Code, City, State, Month/Year      | 79 * 122753                   |
+|  states           |   State Names              |  State                                  | 59 * 2                        |
+|  inventory_sales  |   Sales Inventory          |  Region Name, State, Month/Year         | 44 * 98                       |
+|  inventory_pending|   Newly Pending Inventory  |  Region Name, State, Month/Year         | 41 * 97                       |
+|  rentals          |   Rental Inventory         |  Zip Code, Msa Name, State, Month/Year  | 89 * 2069                     |
+|  schools          |   Schools' listing         |  Zip Code, School Name, Rating          | 6 * 246                       |
 
 
 
