@@ -42,7 +42,9 @@
 - The listing on website provides 25 schools on one page
 - It extracts rating, school name from the first column of listing
 - It scrapes zip code from address frm first column as well.
-- 
+
+- It also extracts states' names from csv file located at Data Resources/States.csv.
+
 ## Transform:
 
 **1. CSVs(Data Resources/ZHVI dir):** 
