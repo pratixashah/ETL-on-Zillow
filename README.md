@@ -1,4 +1,4 @@
-# ETL Project
+# ETL Project on Real Estate Data
 A total of 5.64 million homes were sold in 2020, up 5.6% from 2019 and the most since before the Great Recession even world is facing biggest pandemic ever. Real estate trend has changed over period of time and there are lots of factors which are weigh in like recession, pandemic, market boom etc. This project aims to collect most accurate real estate data from providers like Zillow, transform/enrich with other data sources like school information. region mapping and finally load into database for further analysis.
 
 ## Data Resources:
@@ -107,7 +107,10 @@ A total of 5.64 million homes were sold in 2020, up 5.6% from 2019 and the most 
 |  rentals          |   Rental Inventory         |  Zip Code, Msa Name, State, Month/Year  | 89 * 2069                     |
 |  schools          |   Schools' listing         |  Zip Code, School Name, Rating          | 6 * 246                       |
 
-
+**Why PostgreSQL was choosen?** 
+- PostgreSQL free, open-source database.
+- PostgreSQL is a relational database management system ( RDBMS )
+- This dataset has more relational data where all tables are related by Zip Code / State.
 
 
 
