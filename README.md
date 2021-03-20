@@ -2,11 +2,11 @@
 
 ## Data Resources:
 
-**1. CSVs: Sales Data - https://www.zillow.com/research/data/ **
+**1. CSVs: Sales Data - https://www.zillow.com/research/data/**
 
-**2. Google Sheets: Inventory Data - https://www.zillow.com/research/data/ **
+**2. Google Sheets: Inventory Data - https://www.zillow.com/research/data/**
 
-**3. Web Scraping: School's Data - www.greatschools.org **
+**3. Web Scraping: School's Data - www.greatschools.org**
 
 
 # ETL Process:
