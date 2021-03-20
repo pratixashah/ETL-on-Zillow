@@ -15,7 +15,7 @@
 **1. CSVs(Data Resources/ZHVI dir):** 
 - Zillow website provides ZHVI(Zillow Home Value Index) CSVs files. 
 - It categorise on Numbers of Bed Room. Here 5 files are being used each per Bed Room count (i.e. Zip_zhvi_bdrmcnt_1.csv -> data for 1 Bed Room homes). 
-- Zillow provides monthly data from year 1996 in form of one cloumn per month, total 300 columns.
+- Zillow provides monthly data from year 1996 in form of one cloumn per month.
 
 |  Home Category  |       File Name        |  Data Size (Columns * Rows)  |File Size|
 | --------------- | ---------------------- | -----------------------------| --------|
@@ -38,7 +38,7 @@
 | --------------- | ------------------------ |
 |  One DataFrame  | 79 * 122753 |
 
-**1. Google Sheets(https://drive.google.com/drive/folders/1SCwfsJ8WD_295HeEOx8iBrM8mtwEzM7y):** 
+**2. Google Sheets(https://drive.google.com/drive/folders/1SCwfsJ8WD_295HeEOx8iBrM8mtwEzM7y):** 
 - It provides monthly Sales and Newly Pending Inventory Listings's Raw Data.
 - It also provides Rental data with Zillow Observed Rent Index (ZORI is a repeat-rent index that is weighted to the rental housing stock to ensure representativeness across the entire market, not just those homes currently listed for-rent. The index is dollar-denominated by computing the mean of listed rents that fall into the 40th to 60th percentile range for all homes and apartments in a given region, which is once again weighted to reflect the rental housing stock)
 
@@ -54,7 +54,22 @@
 - Extractes monthly data columns from year 2018
 - Renames column StateName to State
 - Extracts Region Name from Region Name with State
-- Final Output -> DataFrame with index Region Name and State
+- Final Output -> DataFrame with Region Name and State as an index 
+
+- **2.Pending Inventory:**
+- Drops columns RegionID, SizeRank, RegionType
+- Renames column StateName to State
+- Extracts Region Name from Region Name with State
+- Final Output -> DataFrame with Region Name and State as an index 
+
+- **3.Rental Inventory:**
+- Drops columns RegionID, SizeRank
+- Extractes monthly data columns from year 2018
+- Converts columns' format from yyyy-mm to mm/dd/yyyy
+- Renames column RegionName to Zip_Code
+- Extracts State from MsaName(Metropolitan Statistical Area Name) to separate column named State
+- Extracts MsaName from MsaName and state
+- Final Output -> DataFrame with Zip Code
 
 
 
