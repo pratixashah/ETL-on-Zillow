@@ -14,7 +14,7 @@ A total of 5.64 million homes were sold in 2020, up 5.6% from 2019 and the most 
 
 ## Extraction:
 
-**1. CSVs(Data Resources/ZHVI dir):** 
+**1. CSVs (Data Resources/ZHVI dir):** 
 - Zillow website provides ZHVI(Zillow Home Value Index) CSVs files. 
 - It categories Home value on Numbers of Bed Room. Here 5 files are being used each per Bed Room count (i.e. Zip_zhvi_bdrmcnt_1.csv -> data for 1 Bed Room homes). 
 - Zillow provides monthly data from year 1996 in form of one column per month.
@@ -27,7 +27,7 @@ A total of 5.64 million homes were sold in 2020, up 5.6% from 2019 and the most 
 | 4 Bed Room      | Zip_zhvi_bdrmcnt_4.csv |      310 * 26580             | 58.7 MB |
 | 5 Bed Room      | Zip_zhvi_bdrmcnt_5.csv |      310 * 22074             | 48.8 MB |
 
-**2. Google Sheets(https://drive.google.com/drive/folders/1SCwfsJ8WD_295HeEOx8iBrM8mtwEzM7y):** 
+**2. Google Sheets (https://drive.google.com/drive/folders/1SCwfsJ8WD_295HeEOx8iBrM8mtwEzM7y):** 
 - It provides monthly Sales and Newly Pending Inventory Listing's Raw Data.
 - It also provides Rentals data(market rate rent across a given region) with Zillow Observed Rent Index (ZORI is a repeat-rent index that is weighted to the rental housing stock to ensure representativeness across the entire market, not just those homes currently listed for-rent. The index is dollar-denominated by computing the mean of listed rents that fall into the 40th to 60th percentile range for all homes and apartments in a given region, which is once again weighted to reflect the rental housing stock)
 
@@ -48,7 +48,7 @@ A total of 5.64 million homes were sold in 2020, up 5.6% from 2019 and the most 
 
 ## Transform:
 
-**1. CSVs(Data Resources/ZHVI dir):** 
+**1. CSVs (Data Resources/ZHVI dir):** 
 - Renames column RegionName to Zip_Code.
 - Drops columns RegionID, SizeRank, RegionType. StateName
 - Extracts monthly data columns from year 2015 
@@ -62,7 +62,7 @@ A total of 5.64 million homes were sold in 2020, up 5.6% from 2019 and the most 
 | --------------- | ------------------------ |
 |  One DataFrame  | 79 * 122753 |
 
-**2. Google Sheets(https://drive.google.com/drive/folders/1SCwfsJ8WD_295HeEOx8iBrM8mtwEzM7y):** 
+**2. Google Sheets (https://drive.google.com/drive/folders/1SCwfsJ8WD_295HeEOx8iBrM8mtwEzM7y):** 
 
  - **1. Sales Inventory:**
    - Drops columns RegionID, SizeRank, RegionType
